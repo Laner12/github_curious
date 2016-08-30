@@ -1,0 +1,10 @@
+<h1>Welcome to Github Curious</h1>
+
+<div class="well col-md-4 col-md-offset-4">
+  <% if current_user %>
+    Hi there, <%= current_user.name %>
+    <%= link_to "Logout", logout_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign in with Github", github_login_path %>
+  <% end %>
+</div>
